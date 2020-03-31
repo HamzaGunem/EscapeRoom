@@ -13,6 +13,7 @@ public class Button : XRBaseInteractable
     //Check the hight for the hand.
     float PreviousHandHight = 0.0f;
     private XRBaseInteractor HoverInteractor = null;
+
     protected override void Awake()
     {
         base.Awake();
