@@ -7,14 +7,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Button : XRBaseInteractable
 {
     public UnityEvent OnPress = null;
-
     float yMax = 0.0f;
     float yMin = 0.0f;
     private bool PreviousPress = false;
     //Check the hight for the hand.
     float PreviousHandHight = 0.0f;
     private XRBaseInteractor HoverInteractor = null;
-
     protected override void Awake()
     {
         base.Awake();
@@ -25,7 +23,7 @@ public class Button : XRBaseInteractable
 
     private void Start()
     {
-        //Get the colider on the button
+        SetMinMaxValue();
     }
 
     private void OnDestroy()
