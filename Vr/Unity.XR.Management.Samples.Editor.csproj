@@ -58,12 +58,6 @@
      <Compile Include="Assets\Samples\XR Management\3.0.3\Example XR Management implementation\Editor\SampleBuildProcessor.cs" />
      <Compile Include="Assets\Samples\XR Management\3.0.3\Example XR Management implementation\Editor\SampleSettingsEditor.cs" />
      <None Include="Assets\Samples\XR Management\3.0.3\Example XR Management implementation\Editor\Unity.XR.Management.Samples.Editor.asmdef" />
- <Reference Include="Unity.XR.Management.Editor">
- <HintPath>/Users/hamzagunem/Desktop/EscapeRoom/Vr/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.Management">
- <HintPath>/Users/hamzagunem/Desktop/EscapeRoom/Vr/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/hamzagunem/Desktop/EscapeRoom/Vr/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>

@@ -13,18 +13,24 @@ public class Button : XRBaseInteractable
     //Check the hight for the hand.
     float PreviousHandHight = 0.0f;
     private XRBaseInteractor HoverInteractor = null;
+    public Vector3 NewPosition;
 
+    public float StartTimeBtwClick =10f;
+    public float TimeBtwClick;
+    public bool isClicked;
+    public bool isOnCd;
     protected override void Awake()
     {
         base.Awake();
         onHoverEnter.AddListener(StartPress);
         onHoverExit.AddListener(EndPress);
-
     }
 
     private void Start()
     {
         SetMinMaxValue();
+        isClicked = false;
+        isOnCd = false;
     }
 
     private void OnDestroy()
@@ -35,19 +41,46 @@ public class Button : XRBaseInteractable
     //Add interactor so the button knows what hand is interacting with it 
     private void StartPress(XRBaseInteractor interactor)
     {
-        HoverInteractor = interactor;
-        PreviousHandHight = GetLocalYPosition(HoverInteractor.transform.position);
+        if (isClicked == false)
+        {
+            HoverInteractor = interactor;
+            PreviousHandHight = GetLocalYPosition(HoverInteractor.transform.position);
+        }
     }
 
     private void EndPress(XRBaseInteractor interactor)
     {
         HoverInteractor = null;
         PreviousHandHight = 0.0f;
-
         PreviousPress = false;
         SetYPosition(yMax);
+        isClicked = true;
     }
-    private void SetMinMaxValue()
+
+    public void Update()
+    {
+        if(NewPosition.y == yMin)
+        {
+            HoverInteractor = null;
+            isClicked = true;
+        }
+        if(isClicked == true && isOnCd == false) 
+        {
+            TimeBtwClick = StartTimeBtwClick;
+            isOnCd = true;
+        }
+        if(TimeBtwClick <= 0)
+        {
+            isClicked = false;
+            isOnCd = false;
+        }
+
+        TimeBtwClick -= Time.deltaTime;
+        
+        Debug.Log(NewPosition.y);
+    }
+
+    public void SetMinMaxValue()
     {
         Collider collider = GetComponent<Collider>();
         //Get the actual hight of the button using the collider
@@ -90,19 +123,18 @@ public class Button : XRBaseInteractable
         }
     }
     //Set the new position
-    private void SetYPosition(float position)
+    public void SetYPosition(float position)
     {
-        Vector3 NewPosition = transform.localPosition;
+        NewPosition = transform.localPosition;
         NewPosition.y = Mathf.Clamp(position, yMin, yMax);
         transform.localPosition = NewPosition;
     }
 
     private bool InPosition()
     {
-        //If the value is in the range it will be true else it will bee false.
+        //If the value is in the range it will be true else it will be false.
         float InRange = Mathf.Clamp(transform.localPosition.y, yMin, yMin + 0.01f);
         return transform.localPosition.y == InRange;
     }
 
-    
 }

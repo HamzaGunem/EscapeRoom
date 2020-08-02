@@ -55,7 +55,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BattariSpawner.cs" />
+     <Compile Include="Assets\BatteriHolder.cs" />
+     <Compile Include="Assets\BatteriSpawn.cs" />
+     <Compile Include="Assets\BatteriSpawnPoint.cs" />
      <Compile Include="Assets\Button.cs" />
+     <Compile Include="Assets\Door.cs" />
+     <Compile Include="Assets\FadeOut.cs" />
+     <Compile Include="Assets\LightChange.cs" />
+     <Compile Include="Assets\MorseCode.cs" />
+     <Compile Include="Assets\ObjectsWeights.cs" />
+     <Compile Include="Assets\OneMorse.cs" />
+     <Compile Include="Assets\Respawn.cs" />
+     <Compile Include="Assets\ScaleCheck.cs" />
+     <Compile Include="Assets\ScaleHand.cs" />
+     <Compile Include="Assets\ScaleScript\Scale.cs" />
+     <Compile Include="Assets\ScaleScript\Scale2.cs" />
+     <Compile Include="Assets\ScaleScript\Scale3.cs" />
+     <Compile Include="Assets\ScaleScript\Scale4.cs" />
+     <Compile Include="Assets\SoundManager.cs" />
+     <Compile Include="Assets\SpawnPoint.cs" />
+     <Compile Include="Assets\SpawnPoint1.cs" />
+     <Compile Include="Assets\Timmer.cs" />
  <Reference Include="Unity.XR.Management">
  <HintPath>/Users/hamzagunem/Desktop/EscapeRoom/Vr/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
  </Reference>
@@ -73,6 +94,12 @@
  </Reference>
  <Reference Include="Unity.XR.Interaction.Toolkit.Editor">
  <HintPath>/Users/hamzagunem/Desktop/EscapeRoom/Vr/Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Editor">
+ <HintPath>/Users/hamzagunem/Desktop/EscapeRoom/Vr/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Runtime">
+ <HintPath>/Users/hamzagunem/Desktop/EscapeRoom/Vr/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/hamzagunem/Desktop/EscapeRoom/Vr/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -95,11 +122,20 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>/Users/hamzagunem/Desktop/EscapeRoom/Vr/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+ <HintPath>/Users/hamzagunem/Desktop/EscapeRoom/Vr/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.SpatialTracking">
  <HintPath>/Users/hamzagunem/Desktop/EscapeRoom/Vr/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>/Users/hamzagunem/Desktop/EscapeRoom/Vr/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ShaderGraph.Editor">
+ <HintPath>/Users/hamzagunem/Desktop/EscapeRoom/Vr/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+ <HintPath>/Users/hamzagunem/Desktop/EscapeRoom/Vr/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>/Users/hamzagunem/Desktop/EscapeRoom/Vr/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
@@ -632,16 +668,6 @@
  <Reference Include="mscorlib">
  <HintPath>/Applications/Unity/Hub/Editor/2019.3.7f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Unity.XR.Management.Samples.csproj">
-      <Project>{0F971E71-E1BF-5FF2-E24A-39492A5DC465}</Project>
-      <Name>Unity.XR.Management.Samples</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.XR.Management.Samples.Editor.csproj">
-      <Project>{3F0D9536-1D9D-971C-773D-E28C43217EDB}</Project>
-      <Name>Unity.XR.Management.Samples.Editor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
