@@ -55,28 +55,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BattariSpawner.cs" />
-     <Compile Include="Assets\BatteriHolder.cs" />
-     <Compile Include="Assets\BatteriSpawn.cs" />
-     <Compile Include="Assets\BatteriSpawnPoint.cs" />
-     <Compile Include="Assets\Button.cs" />
-     <Compile Include="Assets\Door.cs" />
-     <Compile Include="Assets\FadeOut.cs" />
-     <Compile Include="Assets\LightChange.cs" />
-     <Compile Include="Assets\MorseCode.cs" />
-     <Compile Include="Assets\ObjectsWeights.cs" />
-     <Compile Include="Assets\OneMorse.cs" />
-     <Compile Include="Assets\Respawn.cs" />
-     <Compile Include="Assets\ScaleCheck.cs" />
-     <Compile Include="Assets\ScaleHand.cs" />
      <Compile Include="Assets\ScaleScript\Scale.cs" />
      <Compile Include="Assets\ScaleScript\Scale2.cs" />
      <Compile Include="Assets\ScaleScript\Scale3.cs" />
      <Compile Include="Assets\ScaleScript\Scale4.cs" />
-     <Compile Include="Assets\SoundManager.cs" />
-     <Compile Include="Assets\SpawnPoint.cs" />
-     <Compile Include="Assets\SpawnPoint1.cs" />
-     <Compile Include="Assets\Timmer.cs" />
+     <Compile Include="Assets\Scripts\BattariSpawner.cs" />
+     <Compile Include="Assets\Scripts\BatteriHolder.cs" />
+     <Compile Include="Assets\Scripts\BatteriSpawn.cs" />
+     <Compile Include="Assets\Scripts\BatteriSpawnPoint.cs" />
+     <Compile Include="Assets\Scripts\Button.cs" />
+     <Compile Include="Assets\Scripts\Door.cs" />
+     <Compile Include="Assets\Scripts\FadeOut.cs" />
+     <Compile Include="Assets\Scripts\LightChange.cs" />
+     <Compile Include="Assets\Scripts\MorseCode.cs" />
+     <Compile Include="Assets\Scripts\ObjectsWeights.cs" />
+     <Compile Include="Assets\Scripts\OneMorse.cs" />
+     <Compile Include="Assets\Scripts\Respawn.cs" />
+     <Compile Include="Assets\Scripts\ScaleCheck.cs" />
+     <Compile Include="Assets\Scripts\ScaleHand.cs" />
+     <Compile Include="Assets\Scripts\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\SpawnPoint.cs" />
+     <Compile Include="Assets\Scripts\SpawnPoint1.cs" />
+     <Compile Include="Assets\Scripts\Timmer.cs" />
  <Reference Include="Unity.XR.Management">
  <HintPath>/Users/hamzagunem/Desktop/EscapeRoom/Vr/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
  </Reference>
